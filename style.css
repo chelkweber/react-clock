@@ -1,3 +1,22 @@
 body {
-  background-color: pink;
+  background-color: #0B132B;
+  position: relative;
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+h1 {
+  color: #3A506B;
+  text-align: center;
+}
+
+p {
+  color: #1C2541;
+  text-align: center;
 }
