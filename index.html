@@ -1,18 +1,31 @@
-<div id="root"></div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>React Clock</title>
+    <meta name="description" content="React Clock">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/prop-types@15.6.2/prop-types.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    
+    <script type="text/babel">
+      //Rerender 
+      const rootElement = document.getElementById('root');
+      function tick() {
+      const time = new Date().toLocaleTimeString()
+      const element = <div>It is {time}</div>
+      ReactDOM.render(element, rootElement)
+      }
+      tick();
+      setInterval(tick, 1000);
+    </script>
+    
+  </body>
+</html>
 
 
-<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script type="application/javascript" src="https://unpkg.com/prop-types@15.6.2/prop-types.js"></script>
-<script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
-<script type="text/babel">
-  //Rerender 
-  const rootElement = document.getElementById('root');
-  function tick() {
-    const time = new Date().toLocaleTimeString()
-    const element = <div>It is {time}</div>
-    ReactDOM.render(element, rootElement)
-  }
-  tick();
-  setInterval(tick, 1000);
-</script>
+
